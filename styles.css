@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(240, 78%, 98%);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+#bg-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#bg-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1 {
+  color: hsl(233, 13%, 49%);
+  margin-top: 40px;
+}
+
+.toggle_container {
+  color: hsl(234, 14%, 74%);
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.toggle_container label {
+  margin: 0 20px 0 20px;
+  width: 60px;
+  height: 30px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle_container label .circle {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.15s ease-in;
+}
+
+.toggle_container input {
+  position: absolute;
+  top: -90000000000000px;
+}
+
+.toggle_container input:checked + label .circle {
+  transform: translateX(30px);
+}
+
+.price {
+  background-color: white;
+  color: hsl(233, 13%, 49%);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.price span {
+  color: hsl(232, 13%, 33%);
+  font-size: 4em;
+}
+
+.professional span {
+  color: white;
+}
+
+h5 {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.price ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.price li {
+  border-top: 0.5px solid hsl(234, 14%, 74%);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: hsl(233, 13%, 49%);
+  font-size: 15px;
+}
+
+.last {
+  border-bottom: 0.5px solid hsl(234, 14%, 74%);
+  margin-bottom: 30px;
+}
+
+.monthly {
+  display: none;
+}
+
+.switch_price .monthly {
+  display: block;
+}
+
+.switch_price .annually {
+  display: none;
+}
+
+.price button {
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.price button:hover {
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+  background-image: none;
+}
+
+.professional {
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.professional li {
+  border-top: 0.5px solid white;
+  color: white;
+}
+
+.professional .last {
+  border-bottom: 0.5px solid white;
+}
+
+.professional button {
+  border: none;
+  background-color: white;
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+}
+
+.professional button:hover {
+  border: 1px solid white;
+  background-color: hsl(237, 63%, 64%);
+  background-image: none;
+  color: white;
+}
+
+@media screen and (max-width: 766px) {
+  .professional {
+    transform: none;
+  }
+
+  .price {
+    margin-bottom: 40px;
+  }
+
+  .price span {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .price span {
+    font-size: 3em;
+  }
+}
